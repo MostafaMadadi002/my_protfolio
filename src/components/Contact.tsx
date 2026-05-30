@@ -78,7 +78,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-md rounded-2xl relative overflow-hidden">
+            <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl rounded-[32px] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-pink/20 blur-3xl -translate-y-1/2 translate-x-1/2" />
               
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">

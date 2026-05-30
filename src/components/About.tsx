@@ -20,7 +20,7 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <motion.div style={{ y: y1 }} className="relative">
             <div className="absolute -inset-4 bg-accent-purple/20 rounded-2xl blur-2xl" />
-            <Card className="relative overflow-hidden border-white/10 bg-white/5 backdrop-blur-sm rounded-2xl aspect-[3/4]">
+            <Card className="relative overflow-hidden border-white/10 bg-white/5 backdrop-blur-sm rounded-[32px] aspect-[3/4]">
               <img 
                 src="/src/assets/images/professional_profile_portrait_1780171192831.png" 
                 alt="Profile" 

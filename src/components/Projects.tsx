@@ -97,7 +97,7 @@ export default function Projects() {
                 whileHover={{ scale: 1.02, rotate: "1deg" }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
-                <Card className="group relative overflow-hidden bg-white/5 border-white/10 hover:border-accent-purple/50 transition-all duration-500 rounded-2xl h-full flex flex-col">
+                <Card className="group relative overflow-hidden bg-white/5 border-white/10 hover:border-accent-purple/50 transition-all duration-500 rounded-[32px] h-full flex flex-col">
                   <div className="relative aspect-video overflow-hidden">
                     <img 
                       src={project.image} 

@@ -14,7 +14,7 @@ import CursorFollower from "./components/CursorFollower";
 
 export default function App() {
   return (
-    <main dir="rtl" className="relative min-h-screen bg-background overflow-x-hidden selection:bg-accent-purple/30 selection:text-white font-sans text-right">
+    <main className="relative min-h-screen bg-background overflow-x-hidden selection:bg-accent-purple/30 selection:text-white font-sans">
       {/* Background Dot Grid */}
       <div className="fixed inset-0 dot-grid pointer-events-none z-0" />
       <div className="fixed inset-0 bg-gradient-to-tr from-accent-purple/5 via-transparent to-accent-pink/5 pointer-events-none z-0" />

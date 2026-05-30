@@ -31,20 +31,20 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-display font-bold">
-                بیایید با هم <br />
-                <span className="text-gradient">همکاری کنیم</span>
+              <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight">
+                Let's Build <br />
+                <span className="text-gradient">Something Iconic</span>
               </h2>
               <p className="text-gray-400 text-lg leading-relaxed max-w-md">
-                ایده‌ای دارید؟ خوشحال می‌شوم در مورد پروژه‌تان بشنوم و به شما در رسیدن به اهدافتان کمک کنم.
+                Have a project in mind? Let's connect and transform your vision into a digital masterpiece.
               </p>
             </div>
 
             <div className="space-y-8">
               {[
-                { icon: Mail, label: "ایمیل", value: "hello@mostafa.dev" },
-                { icon: MapPin, label: "محل سکونت", value: "تهران، ایران" },
-                { icon: Phone, label: "تلفن مستقیم", value: "+98 900 123 4567" },
+                { icon: Mail, label: "Email", value: "mostafamadadi.1382@gmail.com" },
+                { icon: MapPin, label: "Location", value: "Kabul, Afghanistan" },
+                { icon: Phone, label: "Phone", value: "+93 784 345 123" },
               ].map((item, i) => (
                 <motion.div 
                   initial={{ opacity: 0, x: -20 }}
@@ -57,8 +57,8 @@ export default function Contact() {
                     <item.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <div className="text-sm text-gray-500 font-medium">{item.label}</div>
-                    <div className="text-lg font-bold">{item.value}</div>
+                    <div className="text-xs text-gray-500 font-black uppercase tracking-widest">{item.label}</div>
+                    <div className="text-lg font-bold font-display">{item.value}</div>
                   </div>
                 </motion.div>
               ))}
@@ -78,54 +78,54 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="p-8 bg-white/5 border-white/10 backdrop-blur-xl rounded-[32px] relative overflow-hidden">
+            <Card className="p-10 bg-white/5 border-white/10 backdrop-blur-xl rounded-[32px] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-accent-pink/20 blur-3xl -translate-y-1/2 translate-x-1/2" />
               
               <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-400">نام شما</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-gray-500">Full Name</label>
                   <Input 
                     required
                     value={formState.name}
                     onChange={e => setFormState({...formState, name: e.target.value})}
-                    placeholder="مثلا: علی محمدی" 
-                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all h-12 rounded-lg" 
+                    placeholder="John Doe" 
+                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all h-14 rounded-xl font-bold font-display" 
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-400">آدرس ایمیل</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-gray-500">Email Address</label>
                   <Input 
                     type="email"
                     required
                     value={formState.email}
                     onChange={e => setFormState({...formState, email: e.target.value})}
-                    placeholder="mail@example.com" 
-                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all h-12 rounded-lg" 
+                    placeholder="hello@example.com" 
+                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all h-14 rounded-xl font-bold font-display" 
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium text-gray-400">پیام شما</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-gray-500">Your Message</label>
                   <Textarea 
                     required
                     value={formState.message}
                     onChange={e => setFormState({...formState, message: e.target.value})}
-                    placeholder="چیزی بنویسید..." 
-                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all min-h-[150px] rounded-lg" 
+                    placeholder="Tell me about your project..." 
+                    className="bg-white/5 border-white/10 focus:border-accent-purple transition-all min-h-[160px] rounded-xl font-bold font-display" 
                   />
                 </div>
                 <Button 
                   type="submit" 
                   disabled={isSubmitting}
-                  className="w-full bg-accent-purple hover:bg-accent-purple/90 text-white h-12 rounded-lg transition-all group"
+                  className="w-full bg-accent-purple hover:bg-accent-purple/90 text-white h-14 rounded-xl transition-all group font-black uppercase tracking-widest"
                 >
                   {isSubmitting ? (
-                    "در حال ارسال..."
+                    "Transmitting..."
                   ) : isSent ? (
-                    "پیام با موفقیت ارسال شد!"
+                    "Message Received!"
                   ) : (
-                    <>
-                      ارسال پیام <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 -translate-y-1 transition-transform" />
-                    </>
+                    <span className="flex items-center gap-3">
+                      Send Message <Send className="w-4 h-4 group-hover:translate-x-1 -translate-y-1 transition-transform" />
+                    </span>
                   )}
                 </Button>
               </form>

@@ -10,40 +10,40 @@ import { ExternalLink, Github } from "lucide-react";
 const PROJECTS: Project[] = [
   {
     id: "1",
-    title: "اپلیکیشن مدیریت تسک هوشمند",
-    description: "یک سیستم مدیریت پروژه با استفاده از هوش مصنوعی برای اولویت‌بندی تسک‌ها.",
+    title: "AI-Powered Task Manager",
+    description: "A comprehensive project management system using AI to prioritize and organize tasks.",
     category: "React",
     image: "https://picsum.photos/seed/task/800/600",
     tags: ["React", "Node.js", "Gemini API", "Tailwind"],
   },
   {
     id: "2",
-    title: "رابط کاربری صرافی ارز دیجیتال",
-    description: "طراحی و توسعه داشبورد معاملاتی با سرعت بالا و چارت‌های real-time.",
+    title: "Crypto Exchange Interface",
+    description: "High-performance trading dashboard with real-time charts and seamless UX.",
     category: "UIUX",
     image: "https://picsum.photos/seed/crypto/800/600",
     tags: ["Figma", "TypeScript", "Recharts"],
   },
   {
     id: "3",
-    title: "پلتفرم آموزشی آنلاین",
-    description: "سیستم کامل مشاهده دوره‌ها و آزمون‌های آنلاین با تجربه کاربری روان.",
+    title: "E-Learning Platform",
+    description: "Full-scale online education system with interactive quizzes and course tracking.",
     category: "Mobile",
     image: "https://picsum.photos/seed/edu/800/600",
     tags: ["Next.js", "React Native", "Firebase"],
   },
   {
     id: "4",
-    title: "داشبورد آنالیتیکس پیشرفته",
-    description: "بصری‌سازی داده‌های پیچیده کسب‌وکار به صورت ساده و کاربردی.",
+    title: "Advanced Analytics Dashboard",
+    description: "Complex business data visualization simplified through intuitive UI components.",
     category: "React",
     image: "https://picsum.photos/seed/data/800/600",
     tags: ["React", "D3.js", "Tailwind"],
   },
   {
     id: "5",
-    title: "برندینگ استودیو خلاق",
-    description: "هویت بصری و وب‌سایت پورتفولیو برای یک تیم طراحی بین‌المللی.",
+    title: "Creative Studio Branding",
+    description: "Visual identity and portfolio website for an international design agency.",
     category: "UIUX",
     image: "https://picsum.photos/seed/design/800/600",
     tags: ["UI Design", "Visual Identity", "Animations"],
@@ -58,13 +58,13 @@ export default function Projects() {
   return (
     <section className="py-32" id="projects">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8 text-left">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-display font-bold">
-              پروژه‌های <span className="text-accent-pink">منتخب</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight">
+              Selected <span className="text-accent-pink">Works</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-xl">
-              تعدادی از بهترین کارهای من که ترکیبی از چالش‌های فنی و خلاقیت هستند.
+              A curated selection of my finest projects, blending technical excellence with creative spark.
             </p>
           </div>
 
@@ -73,13 +73,13 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full border transition-all ${
+                className={`px-6 py-2 rounded-full border border-white/10 font-bold transition-all text-sm uppercase tracking-widest ${
                   filter === cat 
                     ? 'bg-accent-purple border-accent-purple text-white' 
-                    : 'border-white/10 text-gray-400 hover:border-white/30'
+                    : 'text-gray-400 hover:border-white/30'
                 }`}
               >
-                {cat === 'All' ? 'همه' : cat}
+                {cat}
               </button>
             ))}
           </div>

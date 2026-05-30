@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section className="py-20 bg-accent-purple/5 border-y border-white/5 overflow-hidden" id="skills">
       <div className="mb-12 text-center">
-        <h2 className="text-sm uppercase tracking-[0.3em] text-accent-purple font-bold">مهارت‌های فنی و ابزارها</h2>
+        <h2 className="text-xs uppercase tracking-[0.4em] text-accent-purple font-black">Core Stack & Tools</h2>
       </div>
 
       <div className="relative flex overflow-hidden">
@@ -28,7 +28,9 @@ export default function Skills() {
           {SKILLS.map((skill, index) => (
             <div 
               key={index}
-              className="text-4xl md:text-6xl font-display font-bold text-white/20 hover:text-accent-pink transition-colors cursor-default"
+              className={`text-4xl md:text-6xl font-display font-black transition-all duration-500 cursor-default tracking-tighter hover:scale-110 ${
+                skill === "TypeScript" ? "text-[#3178c6] opacity-30 hover:opacity-100" : "text-white/10 hover:text-accent-pink"
+              }`}
             >
               {skill}
             </div>
@@ -48,7 +50,9 @@ export default function Skills() {
           {SKILLS.map((skill, index) => (
             <div 
               key={index + SKILLS.length}
-              className="text-4xl md:text-6xl font-display font-bold text-white/20 hover:text-accent-pink transition-colors cursor-default"
+              className={`text-4xl md:text-6xl font-display font-black transition-all duration-500 cursor-default tracking-tighter hover:scale-110 ${
+                skill === "TypeScript" ? "text-[#3178c6] opacity-30 hover:opacity-100" : "text-white/10 hover:text-accent-pink"
+              }`}
             >
               {skill}
             </div>

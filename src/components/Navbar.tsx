@@ -15,11 +15,11 @@ export default function Navbar() {
   }, []);
 
   const menuItems = [
-    { name: "خانه", href: "#home" },
-    { name: "درباره من", href: "#about" },
-    { name: "پروژه‌ها", href: "#projects" },
-    { name: "مهارت‌ها", href: "#skills" },
-    { name: "تماس", href: "#contact" },
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-display font-bold tracking-tighter"
         >
-          مصطفی<span className="text-accent-purple">.مددی</span>
+          MOSTAFA<span className="text-accent-purple">.DEV</span>
         </motion.div>
 
         {/* Desktop Menu */}
@@ -57,7 +57,7 @@ export default function Navbar() {
             animate={{ opacity: 1, scale: 1 }}
             className="px-6 py-2 bg-white text-black text-sm font-bold rounded-full hover:bg-accent-purple hover:text-white transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
-            استخدام من
+            Hire Me
           </motion.a>
         </div>
 

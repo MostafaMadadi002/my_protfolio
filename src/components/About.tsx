@@ -22,8 +22,8 @@ export default function About() {
             <div className="absolute -inset-4 bg-accent-purple/20 rounded-2xl blur-2xl" />
             <Card className="relative overflow-hidden border-white/10 bg-white/5 backdrop-blur-sm rounded-[32px] aspect-[3/4]">
               <img 
-                src="/src/assets/images/professional_profile_portrait_1780171192831.png" 
-                alt="Profile" 
+                src="/assets/user_uploaded_image_1780171624831.png" 
+                alt="Mostafa Madadi" 
                 className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 referrerPolicy="no-referrer"
               />
@@ -34,8 +34,8 @@ export default function About() {
               style={{ y: y2 }}
               className="absolute -bottom-8 -right-8 w-48 p-6 glass rounded-xl shadow-2xl z-20"
             >
-              <div className="text-3xl font-display font-bold text-accent-pink">+4</div>
-              <div className="text-sm text-gray-400">سال تجربه حرفه‌ای</div>
+              <div className="text-3xl font-display font-black text-accent-pink">4+</div>
+              <div className="text-sm text-gray-400 font-bold">Years of Professional Experience</div>
             </motion.div>
           </motion.div>
 
@@ -46,29 +46,28 @@ export default function About() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-display font-bold">
-                داستانی فراتر از <br />
-                <span className="text-accent-purple">کد و طراحی</span>
+              <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight">
+                Beyond <span className="text-accent-purple">Code</span> & <span className="text-accent-pink">Design</span>
               </h2>
               <div className="w-20 h-1 bg-accent-pink rounded-full" />
             </div>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              من مصطفی مددی هستم، یک طراح و توسعه‌دهنده متعهد به خلق رابط‌های کاربری چشم‌نواز و تجربه‌های دیجیتال بدون نقص. با ترکیبی از هنر طراحی و دقت فنی، پل میان ایده‌ها و واقعیت‌های تعاملی را می‌سازم.
+              I'm Mostafa Madadi, a UI/UX Designer and Frontend Developer dedicated to creating visually stunning and functionally seamless digital experiences. With a blend of artistic vision and technical precision, I bridge the gap between abstract ideas and interactive realities.
             </p>
 
             <p className="text-lg text-gray-300 leading-relaxed">
-              تمرکز اصلی من در سال‌های اخیر بر روی اکوسیستم React و Next.js بوده است. من معتقدم که یک محصول فوق‌العاده نه تنها باید خوب کار کند، بلکه باید احساس خوبی هم به کاربر منتقل کند.
+              Over the past few years, my primary focus has been on the React and Next.js ecosystems. I believe a great product shouldn't just work well—it should feel effortless and delightful to the user.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">
               {[
-                { label: "موقعیت", value: "تهران، ایران" },
-                { label: "همکاری", value: "فریلنس و تمام‌وقت" },
+                { label: "Location", value: "Kabul, Afghanistan" },
+                { label: "Availability", value: "Freelance & Full-time" },
               ].map((item, i) => (
                 <div key={i} className="space-y-1">
-                  <div className="text-sm text-accent-purple uppercase tracking-wider font-semibold">{item.label}</div>
-                  <div className="text-lg font-medium">{item.value}</div>
+                  <div className="text-xs text-accent-purple uppercase tracking-widest font-black">{item.label}</div>
+                  <div className="text-lg font-bold font-display">{item.value}</div>
                 </div>
               ))}
             </div>

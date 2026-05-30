@@ -10,8 +10,12 @@ const SKILLS = [
 
 export default function Skills() {
   return (
-    <section className="py-20 bg-accent-purple/5 border-y border-white/5 overflow-hidden" id="skills">
-      <div className="mb-12 text-center">
+    <section className="relative py-20 bg-accent-purple/5 border-y border-white/5 overflow-hidden" id="skills">
+      {/* Background Glows */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-accent-purple/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-64 h-64 bg-accent-pink/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="mb-12 text-center relative z-10">
         <h2 className="text-xs uppercase tracking-[0.4em] text-accent-purple font-black">Core Stack & Tools</h2>
       </div>
 
@@ -29,7 +33,10 @@ export default function Skills() {
             <div 
               key={index}
               className={`text-4xl md:text-6xl font-display font-black transition-all duration-500 cursor-default tracking-tighter hover:scale-110 ${
-                skill === "TypeScript" ? "text-[#3178c6] opacity-30 hover:opacity-100" : "text-white/10 hover:text-accent-pink"
+                skill === "TypeScript" ? "text-blue-400 opacity-40 hover:opacity-100" : 
+                skill === "React" ? "text-cyan-400 opacity-40 hover:opacity-100" :
+                skill === "Next.js" ? "text-white opacity-40 hover:opacity-100" :
+                "text-white/10 hover:text-accent-pink"
               }`}
             >
               {skill}
@@ -51,7 +58,10 @@ export default function Skills() {
             <div 
               key={index + SKILLS.length}
               className={`text-4xl md:text-6xl font-display font-black transition-all duration-500 cursor-default tracking-tighter hover:scale-110 ${
-                skill === "TypeScript" ? "text-[#3178c6] opacity-30 hover:opacity-100" : "text-white/10 hover:text-accent-pink"
+                skill === "TypeScript" ? "text-blue-400 opacity-40 hover:opacity-100" : 
+                skill === "React" ? "text-cyan-400 opacity-40 hover:opacity-100" :
+                skill === "Next.js" ? "text-white opacity-40 hover:opacity-100" :
+                "text-white/10 hover:text-accent-pink"
               }`}
             >
               {skill}

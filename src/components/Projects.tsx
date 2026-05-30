@@ -63,7 +63,7 @@ export default function Projects() {
             <h2 className="text-4xl md:text-5xl font-display font-black tracking-tight">
               Selected <span className="text-accent-pink">Works</span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-xl">
+            <p className="text-muted-foreground text-lg max-w-xl font-medium">
               A curated selection of my finest projects, blending technical excellence with creative spark.
             </p>
           </div>
@@ -73,10 +73,10 @@ export default function Projects() {
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-6 py-2 rounded-full border border-white/10 font-bold transition-all text-sm uppercase tracking-widest ${
+                className={`px-6 py-2 rounded-full border border-border font-black transition-all text-sm uppercase tracking-widest ${
                   filter === cat 
-                    ? 'bg-accent-purple border-accent-purple text-white' 
-                    : 'text-gray-400 hover:border-white/30'
+                    ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20' 
+                    : 'text-muted-foreground hover:border-primary/50 hover:text-primary'
                 }`}
               >
                 {cat}
@@ -94,10 +94,10 @@ export default function Projects() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                whileHover={{ scale: 1.02, rotate: "1deg" }}
+                whileHover={{ y: -10 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
-                <Card className="group relative overflow-hidden bg-white/5 border-white/10 hover:border-accent-purple/50 transition-all duration-500 rounded-[32px] h-full flex flex-col">
+                <Card className="group relative overflow-hidden bg-card/40 border-border/50 hover:border-primary/50 transition-all duration-500 rounded-[32px] h-full flex flex-col backdrop-blur-md shadow-xl">
                   <div className="relative aspect-video overflow-hidden">
                     <img 
                       src={project.image} 
@@ -105,11 +105,11 @@ export default function Projects() {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
-                      <button className="p-3 bg-accent-purple rounded-full text-white hover:scale-110 transition-transform">
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                      <button className="p-3 bg-primary rounded-full text-white hover:scale-110 transition-transform shadow-lg">
                         <ExternalLink className="w-5 h-5" />
                       </button>
-                      <button className="p-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:scale-110 transition-transform">
+                      <button className="p-3 bg-white/10 backdrop-blur-md rounded-full text-white hover:scale-110 transition-transform border border-white/20">
                         <Github className="w-5 h-5" />
                       </button>
                     </div>
@@ -118,15 +118,15 @@ export default function Projects() {
                   <div className="p-6 flex-1 flex flex-col">
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.tags.map(tag => (
-                        <Badge key={tag} variant="secondary" className="bg-accent-purple/10 text-accent-purple border-accent-purple/20">
+                        <Badge key={tag} variant="secondary" className="bg-primary/10 text-primary border-primary/20 font-bold">
                           {tag}
                         </Badge>
                       ))}
                     </div>
-                    <h3 className="text-xl font-display font-bold mb-2 group-hover:text-accent-purple transition-colors">
+                    <h3 className="text-xl font-display font-black mb-2 group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    <p className="text-muted-foreground text-sm font-medium leading-relaxed mb-6">
                       {project.description}
                     </p>
                   </div>

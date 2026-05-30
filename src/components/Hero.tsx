@@ -32,7 +32,7 @@ function FloatingPaths({ position }: { position: number }) {
                   <motion.path
                       key={path.id}
                       d={path.d}
-                      stroke={path.id % 2 === 0 ? "#6C63FF" : "#FF6584"}
+                      stroke={path.id % 2 === 0 ? "var(--primary)" : "var(--accent-pink)"}
                       strokeWidth={path.width}
                       strokeOpacity={0.05 + path.id * 0.01}
                       initial={{ pathLength: 0.3, opacity: 0.6 }}

@@ -34,11 +34,11 @@ function FloatingPaths({ position }: { position: number }) {
                       d={path.d}
                       stroke={path.id % 2 === 0 ? "var(--primary)" : "var(--accent-pink)"}
                       strokeWidth={path.width}
-                      strokeOpacity={0.05 + path.id * 0.01}
+                      strokeOpacity={0.1 + path.id * 0.02}
                       initial={{ pathLength: 0.3, opacity: 0.6 }}
                       animate={{
                           pathLength: 1,
-                          opacity: [0.1, 0.3, 0.1],
+                          opacity: [0.2, 0.5, 0.2],
                           pathOffset: [0, 1, 0],
                       }}
                       transition={{

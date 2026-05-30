@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { Card } from "@/components/ui/card";
+import profileImage from "@/assets/images/professional_profile_portrait_1780171192831.png";
 
 export default function About() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -22,9 +23,9 @@ export default function About() {
             <div className="absolute -inset-4 bg-primary/20 rounded-2xl blur-2xl" />
             <Card className="relative overflow-hidden border-border/50 bg-card/40 backdrop-blur-md rounded-[32px] aspect-[3/4]">
               <img 
-                src="/assets/user_uploaded_image_1780171624831.png" 
+                src={profileImage} 
                 alt="Mostafa Madadi" 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover transition-all duration-700 hover:scale-105"
                 referrerPolicy="no-referrer"
               />
             </Card>
@@ -52,11 +53,11 @@ export default function About() {
               <div className="w-20 h-1 bg-primary rounded-full" />
             </div>
 
-            <p className="text-lg text-foreground/80 leading-relaxed font-medium">
+            <p className="text-lg text-foreground/90 leading-relaxed font-medium">
               I'm Mostafa Madadi, a UI/UX Designer and Frontend Developer dedicated to creating visually stunning and functionally seamless digital experiences. With a blend of artistic vision and technical precision, I bridge the gap between abstract ideas and interactive realities.
             </p>
 
-            <p className="text-lg text-foreground/80 leading-relaxed font-medium">
+            <p className="text-lg text-foreground/90 leading-relaxed font-medium">
               Over the past few years, my primary focus has been on the React and Next.js ecosystems. I believe a great product shouldn't just work well—it should feel effortless and delightful to the user.
             </p>
 
